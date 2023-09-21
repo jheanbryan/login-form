@@ -21,15 +21,22 @@
                 </div>
 
                 <form action="">
-                    <label for="">Senha</label>
-                    <input type="text" placeholder="Digite seu email" required>
-
                     <label for="">Email</label>
-                    <input type="email" placeholder="Digite sua senha" required>
+                    <div class="container-input">
+                        <img src="assets/mail.svg" alt="" class="icon">
+                        <input type="email" placeholder="Digite seu email" required>
+                    </div>
 
-                    <div>
-                        <div>
-                            <input type="checkbox" name="" id="">
+                    <label for="">Senha</label>
+                    <div class="container-input">
+                        <img src="assets/lock.svg" alt="" class="icon">
+                        <input type="password" placeholder="Digite sua senha" required id="input-password">
+                        <img src="assets/eye.svg" alt="" class="icon" id="eye">
+                    </div>
+
+                    <div class="div-checkbox-trocar-senha">
+                        <div class="container-checkbox">
+                            <input type="checkbox" name="" id="" class="checkbox">
                             <span>Lembre-me</span>
                         </div>
                         <span><a href="/">Esqueci minha senha</a></span>
@@ -48,5 +55,18 @@
             <img src="assets/img/side-image.jpg" alt="">
         </section>
     </main>
+    <script>
+        const eye = document.getElementById('eye');
+        const inputPassword = document.getElementById('input-password');
+
+        eye.addEventListener('click', function(){
+            if(inputPassword.type === 'password'){
+                inputPassword.type = 'text';
+            }
+            else{
+                inputPassword.type = 'password';
+            }
+        })
+    </script>
 </body>
 </html>

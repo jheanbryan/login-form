@@ -49,26 +49,60 @@ form{
     display: flex;
     flex-direction: column;
 }
-form input{
+.container-input{
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+.icon{
+    position: absolute;
+    margin: 5px;
+}
+#eye{
+    right: 0;
+    cursor: pointer;
+}
+.container-input > input{
     background-color: var(--form-background);
     border: 3px solid var(--text-base);
     border-radius: 5px;
     padding: 5px;
     margin-top: 5px;
     line-height: 1.5em;
+    width: 100%;
+    padding-left: 25px;
 }
-input:focus{
+.container-input > input:focus{
     border: 3px solid var(--primary-color);
     outline: none;
 }
 label{
     margin-top: 20px;
 }
-form > div{
+.div-checkbox-trocar-senha{
     display: flex;
     justify-content: space-between;
     margin-top: 15px;
     margin-bottom: 15px;
+}
+.container-checkbox{
+    display: flex;
+    gap: 5px;
+}
+.checkbox{
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border: 2px solid var(--text-base);
+    border-radius: 3px;
+    text-align: center;
+    color: var(--primary-color);
+}
+.checkbox:checked{
+    border: 2px solid var(--primary-color);
+}
+.checkbox:checked::before{
+    content: "✔";
 }
 form div span a{
     color: var(--primary-color);
