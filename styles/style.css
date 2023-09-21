@@ -1,10 +1,12 @@
-@import 'responsive.css';
-
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     color: var(--text-base);
+}
+@font-face {
+    font-family: popins;
+    src: url(Poppins-Regular.ttf);
 }
 :root {
     --text-base: #afb6c2;
@@ -16,6 +18,7 @@
 
 body{
     background-color: var(--background);
+    font-family: popins;
 }
 main{
     display: flex;
@@ -34,7 +37,7 @@ main{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    flex: 1;
+    margin-top: 10vh;
 }
 .header-form h2{
     display: flex;
@@ -52,6 +55,7 @@ form input{
     border-radius: 5px;
     padding: 5px;
     margin-top: 5px;
+    line-height: 1.5em;
 }
 input:focus{
     border: 3px solid var(--primary-color);
