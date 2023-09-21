@@ -1,0 +1,93 @@
+@import 'responsive.css';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--text-base);
+}
+:root {
+    --text-base: #afb6c2;
+    --text-title: #d4ccb6;
+    --background: #191816;
+    --form-background: #24221f;
+    --primary-color: #ffc632;
+}
+
+body{
+    background-color: var(--background);
+}
+main{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    gap: 40px;
+}
+
+/*Seção do formulario*/
+.container{
+    background-color: var(--background);
+}
+.container-formulario{
+    background-color: var(--form-background);
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+.header-form h2{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+form input{
+    background-color: var(--form-background);
+    border: 3px solid var(--text-base);
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 5px;
+}
+input:focus{
+    border: 3px solid var(--primary-color);
+    outline: none;
+}
+label{
+    margin-top: 20px;
+}
+form > div{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+form div span a{
+    color: var(--primary-color);
+    text-decoration: none;
+}
+button{
+    background-color: var(--primary-color);
+    color: black;
+    padding: 15px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+form > span{
+    color: var(--primary-color);
+    margin-inline: auto;
+    margin-top: 15px;
+}
+
+
+/*Img*/
+
+.container-img img{
+    height: 100%;
+}
