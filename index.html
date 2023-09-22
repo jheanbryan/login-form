@@ -23,13 +23,13 @@
                 <form action="">
                     <label for="">Email</label>
                     <div class="container-input">
-                        <img src="assets/mail.svg" alt="" class="icon">
-                        <input type="email" placeholder="Digite seu email" required>
+                        <img src="assets/mail.svg" alt="" class="icon" id="img-mail">
+                        <input type="email" placeholder="Digite seu email" required id="input-mail">
                     </div>
 
                     <label for="">Senha</label>
                     <div class="container-input">
-                        <img src="assets/lock.svg" alt="" class="icon">
+                        <img src="assets/lock.svg" alt="" class="icon" id="img-lock">
                         <input type="password" placeholder="Digite sua senha" required id="input-password">
                         <img src="assets/eye.svg" alt="" class="icon" id="eye">
                     </div>
@@ -45,7 +45,7 @@
                     <button>ENTRAR</button>
 
                     <span>
-                        Não tem uma conta? Registre-se
+                        Não tem uma conta? <a href="">Registre-se</a>
                     </span>
                 </form>
             </div>
@@ -55,17 +55,35 @@
             <img src="assets/img/side-image.jpg" alt="">
         </section>
     </main>
-    <script>
-        const eye = document.getElementById('eye');
+    <script>        
+        const inputMail = document.getElementById('input-mail');
         const inputPassword = document.getElementById('input-password');
 
-        eye.addEventListener('click', function(){
+        const mailIcon = document.getElementById('img-mail');
+        const lockImg = document.getElementById('img-lock');
+        const eyeIcon = document.getElementById('eye');
+
+        eyeIcon.addEventListener('click', function(){
             if(inputPassword.type === 'password'){
                 inputPassword.type = 'text';
             }
             else{
                 inputPassword.type = 'password';
             }
+        })
+
+        inputMail.addEventListener('focus', function(){
+            mailIcon.src = '/assets/mail-focus.svg';
+        })
+        inputMail.addEventListener('blur', function(){
+            mailIcon.src = '/assets/mail.svg';
+        })
+
+        inputPassword.addEventListener('focus', function(){
+            lockImg.src = '/assets/lock-focus.svg';
+        })
+        inputPassword.addEventListener('blur', function(){
+            lockImg.src = '/assets/lock.svg';
         })
     </script>
 </body>
